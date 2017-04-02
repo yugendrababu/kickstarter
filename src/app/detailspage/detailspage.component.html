@@ -1,0 +1,33 @@
+
+     <div *ngIf="project" class="Pagelist">
+      <h2>{{project.title}}</h2>
+         <div>
+         <div class="details"><span>Pledged&nbsp;-&nbsp;$</span>{{project.amtpledged}}</div>
+         <div class="details"><span>Backers&nbsp;-&nbsp;</span>{{project.numbackers}}</div>
+          <div class="details"><span>Location&nbsp;-&nbsp;</span>{{project.location}}</div>            
+         </div> 
+         <br><br>
+    <div class="list">
+                <span>Details</span>
+        <table>
+            <tr><td><label>Name</label></td><td>{{project.by}} </td></tr>
+            <tr><td><label>About</label></td><td>{{project.blurb}} </td></tr>
+            <tr><td><label>Country</label></td><td>{{project.country}} </td></tr>
+            <tr><td><label>Currency</label></td><td>{{project.currency}} </td></tr>
+            <tr><td><label>EndTime</label></td><td>{{project.endtime}} </td></tr>    
+            <tr><td><label>PercentageFunded</label></td><td>{{project.percentagefunded}}</td> </tr>
+            <tr><td><label>Backers</label></td><td>{{project.numbackers}} </td></tr>
+            <tr><td><label>State</label></td><td>{{project.state}} </td> </tr>
+            <tr><td><label>Title</label></td><td>{{project.title}} </td></tr>
+            <tr><td><label>Type</label></td><td>{{project.type}}</td></tr>
+            <tr><td><label>URL</label></td><td><a  target="_blank" href="https://www.kickstarter.com{{project.url}}" >https://www.kickstarter.com{{project.url}}</a></td>
+            </tr>
+                 
+        </table>
+      
+    <div>
+      <button (click)="goBack()">Back</button>
+    </div>
+         </div>
+
+

@@ -1,0 +1,14 @@
+<h1> 
+    {{title}}
+    <ul class="Projects">
+      <li *ngFor="let project of projects"
+        [class.selected]="project === selectedProject"
+        (click)="onSelect(project)"   [routerLink]="['/detail', project.sno]">
+          <div class="badge1"><span class="badge">{{project.sno}}</span></div>
+          <div  class="badge1">{{project.by}}</div>
+              <div class="details"><span>Pledged&nbsp;-&nbsp;$</span>{{project.amtpledged}}</div>
+              <div class="details"><span>Backers&nbsp;-&nbsp;</span>{{project.numbackers}}</div>
+              <div class="details"><span>Location&nbsp;-&nbsp;</span>{{project.location}}</div>
+      </li>
+    </ul> 
+</h1>
